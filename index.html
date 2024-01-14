@@ -42,31 +42,32 @@
 
         function generatePrompt() {
             const personDescriptors = [
-                "Mellow", "Sad", "Angry", "Happy", "Blushing",
+                "Mellow", "Sad", "Angry", "Happy", "Blushing", "Serene", "Confused", "Excited", "Thoughtful", "Sassy",
             ];
 
             const ageDescriptors = [
-                "Very Young", "Young", "Middle Aged", "Old", "Very Old",
+                "Very Young", "Young", "Middle Aged", "Old", "Very Old", "Youthful", "Aging", "Elderly", "Vibrant", "Seasoned",
             ];
 
             const genderDescriptors = [
-                "Man", "Woman",
+                "Man", "Woman", "Non-binary", "Androgynous", "Transgender", "Cisgender", "Genderqueer", "Genderfluid", "Agender", "Bigender",
             ];
 
             const clothingDescriptors = [
-                "Wearing a hat", "Wearing a sweater", "Wearing a dress", "Wearing a suit",
+                "Wearing a hat", "Wearing a sweater", "Wearing a dress", "Wearing a suit", "Wearing casual attire", "In formal wear", "Sporting a costume", "Dressed in layers", "Wearing accessories", "Adorned with jewelry",
             ];
 
             const objectDescriptors = [
-                "Cup", "Book", "Guitar", "Paintbrush", "Camera",
+                "Cup", "Book", "Guitar", "Paintbrush", "Camera", "Laptop", "Sculpture", "Instrument", "Artifact", "Flower",
             ];
 
             const objectConditions = [
-                "Old", "New", "Rusty", "Broken",
+                "Old", "New", "Rusty", "Broken", "Polished", "Weathered", "Vintage", "Shiny", "Cracked", "Worn",
             ];
 
             const sceneVerbs = [
-                "Dancing", "Glancing", "Exploring", "Contemplating",
+                "Dancing", "Glancing", "Exploring", "Contemplating", "Laughing", "Whispering", "Reading", "Painting", "Playing", "Daydreaming",
+                "Singing", "Running", "Resting", "Climbing", "Swimming", "Discovering", "Creating", "Observing", "Reflecting", "Celebrating",
             ];
 
             const personDescriptor = getRandomElement(personDescriptors);
