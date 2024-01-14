@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Prompt Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #prompt-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="prompt-container">
+        <h1>Art Prompt Generator</h1>
+        <p id="prompt"></p>
+        <button onclick="generatePrompt()">Generate Prompt</button>
+    </div>
+
+    <script>
+        function getRandomElement(array) {
+            const randomIndex = Math.floor(Math.random() * array.length);
+            return array[randomIndex];
+        }
+
+        function generatePrompt() {
+            const personDescriptors = [
+                "Mellow", "Sad", "Angry", "Happy", "Blushing",
+            ];
+
+            const ageDescriptors = [
+                "Very Young", "Young", "Middle Aged", "Old", "Very Old",
+            ];
+
+            const genderDescriptors = [
+                "Man", "Woman",
+            ];
+
+            const clothingDescriptors = [
+                "Wearing a hat", "Wearing a sweater", "Wearing a dress", "Wearing a suit",
+            ];
+
+            const objectDescriptors = [
+                "Cup", "Book", "Guitar", "Paintbrush", "Camera",
+            ];
+
+            const objectConditions = [
+                "Old", "New", "Rusty", "Broken",
+            ];
+
+            const sceneVerbs = [
+                "Dancing", "Glancing", "Exploring", "Contemplating",
+            ];
+
+            const personDescriptor = getRandomElement(personDescriptors);
+            const ageDescriptor = getRandomElement(ageDescriptors);
+            const genderDescriptor = getRandomElement(genderDescriptors);
+            const clothingDescriptor = getRandomElement(clothingDescriptors);
+            const objectDescriptor = getRandomElement(objectDescriptors);
+            const objectCondition = getRandomElement(objectConditions);
+            const sceneVerb = getRandomElement(sceneVerbs);
+
+            const prompt = `Draw a ${ageDescriptor.toLowerCase()} ${genderDescriptor.toLowerCase()}, ${personDescriptor.toLowerCase()}, ${clothingDescriptor.toLowerCase()}, holding a ${objectCondition.toLowerCase()} ${objectDescriptor.toLowerCase()}, ${sceneVerb.toLowerCase()}.`;
+
+            document.getElementById('prompt').innerText = prompt;
+        }
+    </script>
+</body>
+</html>
